@@ -18,7 +18,7 @@ license: mit
 <h2 align="center">
   ～AI Harmony, Infinite Possibilities～
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Sunwood-ai-labs/HarmonAI_II)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/MakiAi/HarmonAI_II)
 [![HarmonAI_II - Sunwood-ai-labs](https://img.shields.io/static/v1?label=HarmonAI_II&message=Sunwood-ai-labs&color=blue&logo=github)](https://github.com/HarmonAI_II/Sunwood-ai-labs "Go to GitHub repo")
 [![stars - Sunwood-ai-labs](https://img.shields.io/github/stars/HarmonAI_II/Sunwood-ai-labs?style=social)](https://github.com/HarmonAI_II/Sunwood-ai-labs)
 [![forks - Sunwood-ai-labs](https://img.shields.io/github/forks/HarmonAI_II/Sunwood-ai-labs?style=social)](https://github.com/HarmonAI_II/Sunwood-ai-labs)
@@ -45,7 +45,7 @@ HarmonAI IIは、AIとの調和と無限の可能性を追求するプロジェ�
 
 HarmonAI IIのデモアプリケーションは、GitHub Actionsと連携し、自動的にデプロイされています。デモアプリを体験することで、HarmonAI IIの機能を直感的に理解することができます。
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Sunwood-ai-labs/HarmonAI_II)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/MakiAi/HarmonAI_II)
 
 ## 🚀 Getting Started
 
