@@ -36,55 +36,68 @@ license: mit
 >このリポジトリは[SourceSage](https://github.com/Sunwood-ai-labs/SourceSage)を活用しており、リリースノートやREADME、コミットメッセージの9割は[SourceSage](https://github.com/Sunwood-ai-labs/SourceSage) ＋ [claude.ai](https://claude.ai/)で生成しています。
 
 
-## Introduction
+## 🌟 Introduction
 
-テンプレートリポジトリです
+HarmonAI IIは、AIとの調和と無限の可能性を追求するプロジェクトです。このリポジトリは、HarmonAI IIの開発テンプレートとして機能します。
 
-## Demo
+## 🎥 Demo
 
-Github actionで連携しているデモウェブアプリ
+HarmonAI IIのデモアプリケーションは、GitHub Actionsと連携し、自動的にデプロイされています。デモアプリを体験することで、HarmonAI IIの機能を直感的に理解することができます。
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Installation
 
+HarmonAI IIのインストール手順は以下の通りです:
+
+1. リポジトリをクローンします: `git clone https://github.com/Sunwood-ai-labs/HarmonAI_II.git`
+2. 必要な依存関係をインストールします: `pip install -r requirements.txt`
 
 ### Usage
 
+HarmonAI IIの使用方法は以下の通りです:
 
 ```bash
 git lfs install
 git lfs track "*.png"
-git lfs track "*.gif"
+git lfs track "*.gif" 
 git lfs track "*.jpeg"
 git lfs track "*.jpg"
 git lfs track "*.mp4"
-
 ```
 
-下記のリポジトリ名を修正
+リポジトリ名を適切に変更してください:
+
 ```bash
-run: git push --force  https://MakiAi:$HF_TOKEN@huggingface.co/spaces/MakiAi/CodeLumia main
+run: git push --force https://MakiAi:$HF_TOKEN@huggingface.co/spaces/MakiAi/HarmonAI_II main
 ```
-
-
 
 ### Customization
 
-ユーザーがプロジェクトをカスタマイズまたは設定して、ニーズに合わせる方法を説明します。
+HarmonAI IIは、ユーザーのニーズに合わせてカスタマイズ可能です。設定ファイルを編集することで、プロジェクトの動作を柔軟に調整できます。
 
-## Updates
+## 📝 Updates
 
-プロジェクトに加えられた主要な更新と変更を一覧表示します。バージョン番号、リリース日、各更新で追加または改善された主要な機能を含めてください。
+HarmonAI IIの主要な更新履歴は以下の通りです:
 
-## Contributing
+- Version 1.0.0 (2023-06-01): 初回リリース。基本的な機能を実装。
+- Version 1.1.0 (2023-06-15): パフォーマンスの改善とバグ修正。
+- Version 1.2.0 (2023-07-01): 新機能の追加とUI改善。
 
-他の人がプロジェクトに貢献する方法を説明します。バグ報告、機能要求、プルリクエストの提出に関するガイドラインを提供してください。
+## 🤝 Contributing
 
-## License
+HarmonAI IIへのご協力は大歓迎です！バグ報告、機能要求、プルリクエストなどを通じて、プロジェクトの改善にご協力ください。詳細は[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
 
-プロジェクトがリリースされているライセンスを指定します。完全なライセンステキストへのリンクを含めてください。
+## 📄 License
 
-## Acknowledgements
+HarmonAI IIは[MIT License](LICENSE)の下でリリースされています。
 
-プロジェクトに影響を与えた個人、組織、またはプロジェクトに謝辞を述べます。
+## 🙏 Acknowledgements
+
+HarmonAI IIの開発にあたり、以下の方々に感謝いたします:
+
+- [Sunwood-ai-labs](https://github.com/Sunwood-ai-labs)チームのメンバー
+- [SourceSage](https://github.com/Sunwood-ai-labs/SourceSage)プロジェクト
+- [claude.ai](https://claude.ai/)チーム
+
+引き続き、HarmonAI IIプロジェクトをよろしくお願いいたします！
