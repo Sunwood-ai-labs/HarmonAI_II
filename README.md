@@ -50,6 +50,13 @@ git lfs track "*.mp4"
 
 ```
 
+下記のリポジトリ名を修正
+```bash
+run: git push --force  https://MakiAi:$HF_TOKEN@huggingface.co/spaces/MakiAi/CodeLumia main
+```
+
+
+
 ### Customization
 
 ユーザーがプロジェクトをカスタマイズまたは設定して、ニーズに合わせる方法を説明します。
