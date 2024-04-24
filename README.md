@@ -18,6 +18,7 @@ license: mit
 <h2 align="center">
   ～AI Harmony, Infinite Possibilities～
 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Sunwood-ai-labs/HarmonAI_II)
 [![HarmonAI_II - Sunwood-ai-labs](https://img.shields.io/static/v1?label=HarmonAI_II&message=Sunwood-ai-labs&color=blue&logo=github)](https://github.com/HarmonAI_II/Sunwood-ai-labs "Go to GitHub repo")
 [![stars - Sunwood-ai-labs](https://img.shields.io/github/stars/HarmonAI_II/Sunwood-ai-labs?style=social)](https://github.com/HarmonAI_II/Sunwood-ai-labs)
 [![forks - Sunwood-ai-labs](https://img.shields.io/github/forks/HarmonAI_II/Sunwood-ai-labs?style=social)](https://github.com/HarmonAI_II/Sunwood-ai-labs)
@@ -43,6 +44,8 @@ HarmonAI IIは、AIとの調和と無限の可能性を追求するプロジェ�
 ## 🎥 Demo
 
 HarmonAI IIのデモアプリケーションは、GitHub Actionsと連携し、自動的にデプロイされています。デモアプリを体験することで、HarmonAI IIの機能を直感的に理解することができます。
+
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Sunwood-ai-labs/HarmonAI_II)
 
 ## 🚀 Getting Started
 
@@ -78,11 +81,16 @@ HarmonAI IIは、ユーザーのニーズに合わせてカスタマイズ可能
 
 ## 📝 Updates
 
-HarmonAI IIの主要な更新履歴は以下の通りです:
+- v1.1.0 (2024-04-24):
+  - フロントページの作成
+  - READMEの全体的な改善
+  - GitHub Actionsを使用したHuggingFace hubへの自動シンク機能の追加
+  - .gitignoreと.SourceSageignoreの更新
+  - プロジェクト名を「HarmonAI」から「HarmonAI_II」に変更
+- v1.0.0 (2024-04-20):
+  - 初回リリース
+  - 基本的な機能を実装
 
-- Version 1.0.0 (2023-06-01): 初回リリース。基本的な機能を実装。
-- Version 1.1.0 (2023-06-15): パフォーマンスの改善とバグ修正。
-- Version 1.2.0 (2023-07-01): 新機能の追加とUI改善。
 
 ## 🤝 Contributing
 
