@@ -1,3 +1,15 @@
+---
+title: HarmonAI II
+emoji: 🌖
+colorFrom: purple
+colorTo: gray
+sdk: streamlit
+sdk_version: 1.33.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 
 <p align="center">
 <img src="https://media.githubusercontent.com/media/Sunwood-ai-labs/HarmonAI/main/docs/icon/icon2.gif" width="100%">
