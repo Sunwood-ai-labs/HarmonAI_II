@@ -6,6 +6,8 @@
   {subtitle}
 <br>
   {badges}
+<br>
+{sns_badges}
 
 </h2>
 
