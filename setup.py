@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="harmon_ai",
-    version="1.2.0",
+    version="1.3.0",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
