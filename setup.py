@@ -18,6 +18,7 @@ setup(
             "harmon-ai = harmon_ai.cli:main"
         ]
     },
+    url="https://github.com/your_username/gaiah",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
