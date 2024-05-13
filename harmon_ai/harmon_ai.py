@@ -16,7 +16,7 @@ class HarmonAI:
         twitter_url,
         blog_url
     ):
-        with open(os.path.join(os.path.dirname(__file__), "templates", "readme_template.md"), "r") as file:
+        with open(os.path.join(os.path.dirname(__file__), "templates", "readme_template.md"), "r", encoding="utf8") as file:
             template = file.read()
 
         badge_template = HarmonAI.generate_badges(repo_name, owner_name, package_name)
@@ -37,7 +37,7 @@ class HarmonAI:
 
     @staticmethod
     def generate_badges(repo_name, owner_name, package_name):
-        with open(os.path.join(os.path.dirname(__file__), "templates", "badges_template.md"), "r") as file:
+        with open(os.path.join(os.path.dirname(__file__), "templates", "badges_template.md"), "r", encoding="utf8") as file:
             template = file.read()
 
         template = template.replace("{repo_name}", repo_name)
@@ -48,7 +48,7 @@ class HarmonAI:
 
     @staticmethod
     def generate_sns_badges(website_url, github_url, twitter_url, blog_url):
-        with open(os.path.join(os.path.dirname(__file__), "templates", "sns_template.md"), "r") as file:
+        with open(os.path.join(os.path.dirname(__file__), "templates", "sns_template.md"), "r", encoding="utf8") as file:
             template = file.read()
 
         template = template.replace("{website_url}", website_url)
