@@ -5,8 +5,6 @@ from harmon_ai import HarmonAI
 # from templates.footer import show_footer
 
 def main():
-    # show_header()
-    # repo_name, owner_name, package_name, icon_url, title, subtitle, important_message = show_sidebar()
     
     if st.button("Generate README"):
         pass

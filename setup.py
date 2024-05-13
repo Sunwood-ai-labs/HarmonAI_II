@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="harmon_ai",
     version="0.1.0",
@@ -8,6 +11,8 @@ setup(
     install_requires=[
         # Add any dependencies here
     ],
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     entry_points={
         "console_scripts": [
             "harmon-ai = harmon_ai.cli:main"
