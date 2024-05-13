@@ -1,31 +1,25 @@
-import argparse
 import os
-from .harmon_ai import harmon_ai
+import argparse
+from .harmon_ai import HarmonAI
 
 def main():
     parser = argparse.ArgumentParser(description="GitHubリポジトリ用のREADMEテンプレートとバッジを生成します。")
-    parser.add_argument("--repo_name", help="GitHubリポジトリの名前", default="your-repo")
-    parser.add_argument("--owner_name", help="リポジトリオーナーのGitHubユーザー名", default="your-github-username")
-    parser.add_argument("--package_name", help="パッケージの名前", default="your-package")
-    parser.add_argument("--icon_url", help="READMEに表示するアイコンのURL", default="https://example.com/icon.png")
-    parser.add_argument("--title", help="プロジェクトのタイトル", default="Your Project Title")
-    parser.add_argument("--subtitle", help="プロジェクトのサブタイトル", default="Your Project Subtitle")
-    parser.add_argument("--important_message", help="READMEに表示する重要なメッセージ", default=None)
-    parser.add_argument("--sections_content", help="READMEのセクションの内容（introduction, demo, getting_started, updates, contributing, license, acknowledgements）をマークダウン形式で指定", default=None)
-    parser.add_argument("--output_dir", help="生成されたREADMEファイルの出力ディレクトリ", default=".harmon_ai")
-    parser.add_argument("--output_file", help="生成されたREADMEファイルの名前", default="_README_template.md")
+    parser.add_argument("repo_name", help="GitHubリポジトリの名前")
+    parser.add_argument("owner_name", help="リポジトリオーナーのGitHubユーザー名")
+    parser.add_argument("package_name", help="パッケージの名前")
+    parser.add_argument("icon_url", help="READMEに表示するアイコンのURL")
+    parser.add_argument("title", help="プロジェクトのタイトル")
+    parser.add_argument("subtitle", help="プロジェクトのサブタイトル")
+    parser.add_argument("important_message", help="READMEに表示する重要なメッセージ")
+    parser.add_argument("sections_content", help="READMEのセクションの内容（introduction, demo, getting_started, updates, contributing, license, acknowledgements）をマークダウン形式で指定")
+    parser.add_argument("--website_url", help="プロジェクトのWebサイトのURL", default="")
+    parser.add_argument("--github_url", help="GitHubリポジトリのURL", default="")
+    parser.add_argument("--twitter_url", help="TwitterプロフィールのURL", default="")
+    parser.add_argument("--blog_url", help="公式ブログ記事のURL", default="")
 
     args = parser.parse_args()
 
-    if args.important_message is None:
-        with open(os.path.join(os.path.dirname(__file__), "templates", "important_template.md"), "r", encoding="utf8") as file:
-            args.important_message = file.read()
-
-    if args.sections_content is None:
-        with open(os.path.join(os.path.dirname(__file__), "templates", "sections_template.md"), "r", encoding="utf8") as file:
-            args.sections_content = file.read()
-
-    readme_template = harmon_ai.generate_readme(
+    readme_template = HarmonAI.generate_readme(
         args.repo_name,
         args.owner_name,
         args.package_name,
@@ -33,8 +27,13 @@ def main():
         args.title,
         args.subtitle,
         args.important_message,
-        args.sections_content
+        args.sections_content,
+        args.website_url,
+        args.github_url,
+        args.twitter_url,
+        args.blog_url
     )
+
 
     os.makedirs(args.output_dir, exist_ok=True)
     output_path = os.path.join(args.output_dir, args.output_file)
