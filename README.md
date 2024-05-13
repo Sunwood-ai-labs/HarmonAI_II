@@ -56,65 +56,52 @@ HarmonAI IIは、AIとの調和と無限の可能性を追求するプロジェ�
 
 HarmonAI IIのデモアプリケーションは、GitHub Actionsと連携し、自動的にデプロイされています。デモアプリを体験することで、HarmonAI IIの機能を直感的に理解することができます。
 
+（準備中。。。）
+
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/MakiAi/HarmonAI_II)
 
 ## 🚀 使い方
 
 ### インストール
-HarmonAI IIのインストール手順は以下の通りです:
+HarmonAI IIは、以下のコマンドでインストールできます:
 
-1. リポジトリをクローンします: `git clone https://github.com/Sunwood-ai-labs/HarmonAI_II.git`
-2. 必要な依存関係をインストールします: `pip install -r requirements.txt`
+```bash
+pip install harmon_ai
+```
 
 ### 使用方法
-HarmonAI IIの使用方法は以下の通りです:
+HarmonAI IIは、コマンドラインインターフェース(CLI)から簡単に使用できます。以下のコマンドを実行することで、プロジェクトのREADMEファイルを生成できます:
 
 ```bash
-git lfs install
-git lfs track "*.png"
-git lfs track "*.gif" 
-git lfs track "*.jpeg"
-git lfs track "*.jpg"
-git lfs track "*.mp4"
-```
-
-リポジトリ名を適切に変更してください:
-
-```bash
-run: git push --force https://MakiAi:$HF_TOKEN@huggingface.co/spaces/MakiAi/HarmonAI_II main
-```
-
 harmon-ai --repo_name=HarmonAI_II --owner_name=Sunwood-ai-labs --package_name=harmon_ai --icon_url=https://huggingface.co/datasets/MakiAi/IconAssets/resolve/main/HarmonAI_II_icon.jpeg --title="Harmon AI"
+```
 
+生成されたREADMEファイルは、プロジェクトのルートディレクトリに `README.md` として保存されます。
 
 ### カスタマイズ
 HarmonAI IIは、ユーザーのニーズに合わせてカスタマイズ可能です。設定ファイルを編集することで、プロジェクトの動作を柔軟に調整できます。
 
 ## 📝 アップデート
 
+### v1.3.0 (2024-05-13)
+- SNSテンプレートの追加とSNSバッジ生成機能の実装
+- CLIの強化とREADMEの更新
+- GitHub Actionsトリガーの更新
+- リファクタリングとコードのクリーンアップ
+
 ### v1.2.0 (2024-05-13)
-- `harmon_ai`パッケージの刷新
-  - `harmon_ai`クラスの実装
-  - テンプレートファイルの読み込みと置換機能の追加
-- コマンドラインインターフェース(CLI)の導入
-  - `argparse`を使用したCLIオプションの定義
-  - 生成されたREADMEファイルの出力機能の追加
+- `harmon_ai`パッケージの刷新とCLIの導入
 - READMEテンプレートファイルの拡充
-  - バッジ、重要メッセージ、README構造、セクションのテンプレートの追加
 - `harmon_ai`クラスのテストケースの実装
 - パッケージのセットアップ設定の更新
-- PyPIへのパッケージ公開ワークフローの追加
 
 ### v1.1.0 (2024-04-24)
-- フロントページの作成
-- READMEの全体的な改善
+- フロントページの作成とREADMEの改善
 - GitHub Actionsを使用したHugging Face hubへの自動シンク機能の追加
-- .gitignoreと.SourceSageignoreの更新
-- プロジェクト名を「HarmonAI」から「HarmonAI_II」に変更
+- プロジェクト名の変更
 
 ### v1.0.0 (2024-04-20)
-- 初回リリース
-- 基本的な機能を実装
+- 初回リリースと基本的な機能の実装
 
 ## 🤝 コントリビューション
 HarmonAI IIへのご協力は大歓迎です！バグ報告、機能要求、プルリクエストなどを通じて、プロジェクトの改善にご協力ください。詳細は[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
