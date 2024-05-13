@@ -1,15 +1,18 @@
 import streamlit as st
+from harmon_ai import HarmonAI
+# from templates.header import show_header
+# from templates.sidebar import show_sidebar
+# from templates.footer import show_footer
 
-
-# def load_markdown(file_path):
-#     with open(file_path, encoding="utf8") as f:
-#         return f.read()
-
-# def display_front_page():
-#     html_front = load_markdown('docs/page_front.md')
-#     st.markdown(f"{html_front}", unsafe_allow_html=True)
+def main():
+    # show_header()
+    # repo_name, owner_name, package_name, icon_url, title, subtitle, important_message = show_sidebar()
     
+    if st.button("Generate README"):
+        pass
+    #     readme_text = HarmonAI.generate_readme(repo_name, owner_name, package_name, icon_url, title, subtitle, important_message)
+    #     st.markdown(readme_text)
+    # show_footer()
+
 if __name__ == "__main__":
-    # display_front_page()
-    x = st.slider('Select a value')
-    st.write(x, 'squared is', x * x)
+    main()
