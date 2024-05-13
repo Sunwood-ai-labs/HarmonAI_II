@@ -84,6 +84,9 @@ git lfs track "*.mp4"
 run: git push --force https://MakiAi:$HF_TOKEN@huggingface.co/spaces/MakiAi/HarmonAI_II main
 ```
 
+harmon-ai --repo_name=HarmonAI_II --owner_name=Sunwood-ai-labs --package_name=harmon_ai --icon_url=https://huggingface.co/datasets/MakiAi/IconAssets/resolve/main/HarmonAI_II_icon.jpeg --title="Harmon AI"
+
+
 ### カスタマイズ
 HarmonAI IIは、ユーザーのニーズに合わせてカスタマイズ可能です。設定ファイルを編集することで、プロジェクトの動作を柔軟に調整できます。
 
