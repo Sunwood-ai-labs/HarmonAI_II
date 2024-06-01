@@ -1,12 +1,12 @@
+# main.py
 import os
-import shutil
-import yaml
+from pathlib import Path
 from .harmon_ai import HarmonAI
 from art import *
 from termcolor import colored
-from pathlib import Path
 from loguru import logger
 import sys
+from .utils import load_config, load_file_content, copy_cicd_file_if_missing, config_preview
 
 logger.configure(
     handlers=[
@@ -18,36 +18,13 @@ logger.configure(
     ]
 )
 
-def load_config(file_path, default_path):
-    if not os.path.exists(file_path):
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        shutil.copy(default_path, file_path)
-        logger.info("設定ファイルがテンプレートから作成されました：{}", file_path)
-    with open(file_path, "r", encoding='utf8') as file:
-        return yaml.safe_load(file)
-
-def load_file_content(user_file_path, default_file_path):
-    user_path = Path(user_file_path)
-    base_path = Path(__file__).parent
-    default_path = base_path / default_file_path
-
-    logger.debug("デフォルトパス：{}", default_path)
-    logger.debug("ユーザーパス：{}... 存在する：{}", user_path, os.path.exists(user_path))
-    
-    if not os.path.exists(user_path):
-        os.makedirs(user_path.parent, exist_ok=True)
-        shutil.copy(default_path, user_path)
-        logger.info("テンプレートファイルがこちらにコピーされました：{}", user_path)
-
-    with open(user_path, "r", encoding="utf8") as file:
-        return file.read()
-
 def main():
+    logger.add("harmon_ai_log.log", rotation="10 MB")
     config_path = os.path.expanduser("./.harmon_ai/config.yml")
-    default_config_path = os.path.join(Path(__file__).parent, "templates/config.example.yml")
-    config = load_config(config_path, default_config_path)
+    config = load_config(config_path, os.path.join(Path(__file__).parent, "templates/config.example.yml"))
 
     tprint("-- HarmonAI --")
+    config_preview(config)
 
     important_message = load_file_content(
         config['important_message_file'],
@@ -58,36 +35,11 @@ def main():
         "templates/sections_template.md"
     )
 
-    logger.info("リポジトリ名：{}", config['repo_name'])
-    logger.info("オーナー名：{}", config['owner_name'])
-    logger.info("パッケージ名：{}", config['package_name'])
-    logger.info("アイコンURL：{}", config['icon_url'])
-    logger.info("プロジェクトタイトル：{}", config['title'])
-    logger.info("サブタイトル：{}", config['subtitle'])
-    logger.info("重要なメッセージテンプレートファイル：{}", config['important_message_file'])
-    logger.info("セクション内容テンプレートファイル：{}", config['sections_content_file'])
-    logger.info("プロジェクトWebサイトURL：{}", config['website_url'])
-    logger.info("GitHub URL：{}", config['github_url'])
-    logger.info("Twitter URL：{}", config['twitter_url'])
-    logger.info("ブログURL：{}", config['blog_url'])
-    logger.info("出力ディレクトリ：{}", config['output_dir'])
-    logger.info("出力ファイル名：{}", config['output_file'])
+    # CICDファイルを確認してコピー
+    copy_cicd_file_if_missing(config)
 
     # HarmonAIの使用例
-    readme_template = HarmonAI.run(
-        config['repo_name'],
-        config['owner_name'],
-        config['package_name'],
-        config['icon_url'],
-        config['title'],
-        config['subtitle'],
-        important_message,
-        sections_content,
-        config['website_url'],
-        config['github_url'],
-        config['twitter_url'],
-        config['blog_url']
-    )
+    readme_template = HarmonAI.run(config)
 
     output_dir = config['output_dir']
     output_file = config['output_file']
