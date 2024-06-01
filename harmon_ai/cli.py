@@ -19,32 +19,32 @@ logger.configure(
 )
 
 def main():
-    logger.add("harmon_ai_log.log", rotation="10 MB")
+
     config_path = os.path.expanduser("./.harmon_ai/config.yml")
     config = load_config(config_path, os.path.join(Path(__file__).parent, "templates/config.example.yml"))
 
     tprint("-- HarmonAI --")
     config_preview(config)
 
+    output_dir = config['output_dir']
+    os.makedirs(output_dir, exist_ok=True)
+
     important_message = load_file_content(
-        config['important_message_file'],
+        os.path.join(output_dir, config['important_message_file']),
         "templates/important_template.md"
     )
     sections_content = load_file_content(
-        config['sections_content_file'],
+        os.path.join(output_dir, config['sections_content_file']),
         "templates/sections_template.md"
     )
 
     # CICDファイルを確認してコピー
-    copy_cicd_file_if_missing(config)
+    copy_cicd_file_if_missing(config, output_dir)
 
     # HarmonAIの使用例
     readme_template = HarmonAI.run(config)
 
-    output_dir = config['output_dir']
-    output_file = config['output_file']
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, output_file)
+    output_path = os.path.join(output_dir, config['output_file'])
     with open(output_path, "w", encoding="utf8") as file:
         file.write(readme_template)
 
