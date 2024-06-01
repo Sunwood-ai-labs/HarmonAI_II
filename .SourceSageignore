@@ -24,3 +24,9 @@ sourcesage.egg-info
 dist
 build
 docs
+harmon_ai.egg-info
+.SourceSageignore
+.Gaiah.md
+.SourceSageAssets
+templates
+.Prothiel.md

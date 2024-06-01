@@ -1,0 +1,16 @@
+repo_name: "Repo Name"
+owner_name: "Owner Name"
+package_name: "Package Name"
+icon_url: "Icon URL"
+title: "Title"
+subtitle: "Subtitle"
+important_message: null
+sections_content: null
+website_url: ""
+github_url: ""
+twitter_url: ""
+blog_url: ""
+output_dir: ".harmon_ai"
+output_file: "_README_template.md"
+cicd_file_path: "./.harmon_ai/publish-to-pypi.yml"
+cicd_template_path: "templates/publish-to-pypi.yml"
