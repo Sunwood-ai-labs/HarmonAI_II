@@ -27,9 +27,9 @@ def load_file_content(user_file_path, default_file_path):
         return file.read()
 
 def copy_cicd_file_if_missing(config, output_dir):
-    cicd_file_path = Path(output_dir) / config.get('cicd_file_path', 'publish-to-pypi.yml')
-    cicd_main_path = Path(config["production_dir"]) /  Path(config["github_cicd_dir"]) / config.get('cicd_main_path', 'publish-to-pypi.yml')
-    template_path = Path(__file__).parent / config.get('cicd_template_path', 'templates/publish-to-pypi.yml')
+    cicd_file_path = Path(output_dir) / config['harmon_ai']['product'].get('cicd_file_path', 'publish-to-pypi.yml')
+    cicd_main_path = Path(config["harmon_ai"]["main"]["main_dir"]) /  Path(config["harmon_ai"]["product"]["github_cicd_dir"]) / config['harmon_ai']['product'].get('cicd_main_path', 'publish-to-pypi.yml')
+    template_path = Path(__file__).parent / config['harmon_ai']['product'].get('cicd_template_path', 'templates/publish-to-pypi.yml')
     if not cicd_file_path.exists():
         shutil.copy(template_path, cicd_file_path)
         logger.info("[Development] CICDファイルがテンプレートからコピーされました：{}", cicd_file_path)
@@ -37,7 +37,7 @@ def copy_cicd_file_if_missing(config, output_dir):
         # ファイルを読み込んで内容を置換
         with open(cicd_file_path, 'r+', encoding='utf-8') as file:
             content = file.read()
-            content = content.replace("https://pypi.org/p/harmon_ai", f"https://pypi.org/p/{config['package_name']}")
+            content = content.replace("https://pypi.org/p/harmon_ai", f"https://pypi.org/p/{config['harmon_ai']['environment']['package_name']}")
             file.seek(0)
             file.write(content)
             file.truncate()  # 既存の内容が新しい内容より長い場合、余分な部分を削除
@@ -49,5 +49,5 @@ def copy_cicd_file_if_missing(config, output_dir):
         logger.info("[Production] CICDファイルが開発用からコピーされました：{}", cicd_main_path)
 
 def config_preview(config):
-    for key, value in config.items():
+    for key, value in config['harmon_ai']['environment'].items():
         logger.info("{}：{}", key.replace('_', ' ').capitalize(), value)
