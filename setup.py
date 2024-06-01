@@ -10,6 +10,8 @@ setup(
     include_package_data=True,
     install_requires=[
         # Add any dependencies here
+        'pyyaml',
+        'loguru'
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",
