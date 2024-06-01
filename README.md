@@ -34,54 +34,54 @@ license: mit
 </p>
 
 >[!IMPORTANT]
->このリポジトリは[SourceSage](https://github.com/Sunwood-ai-labs/SourceSage)を活用しており、リリースノートやREADME、コミットメッセージの9割は[SourceSage](https://github.com/Sunwood-ai-labs/SourceSage) ＋ [claude.ai](https://claude.ai/)で生成しています。
+>このリポジトリのリリースノートやREADME、コミットメッセージの9割近くは[claude.ai](https://claude.ai/)や[ChatGPT4](https://chatgpt.com/)を活用した[AIRA](https://github.com/Sunwood-ai-labs/AIRA), [SourceSage](https://github.com/Sunwood-ai-labs/SourceSage), [Gaiah](https://github.com/Sunwood-ai-labs/Gaiah), [HarmonAI_II](https://github.com/Sunwood-ai-labs/HarmonAI_II)で生成しています。
 
+## 🌟 HarmonAI IIへようこそ！
 
-## 🌟 はじめに
+HarmonAI IIは、AIとの調和と無限の可能性を追求するプロジェクトです。私たちは、開発者の皆様がAIの力を最大限に活用し、効率的かつ高品質なソフトウェア開発を行えるよう、ユーザーフレンドリーなテンプレートを提供しています。
 
-HarmonAI IIは、AIとの調和と無限の可能性を追求するプロジェクトです。このリポジトリは、HarmonAI IIの開発テンプレートとして機能し、以下のような特長を備えています:
+## 🚀 HarmonAI IIの特長
 
-### 1. 開発スピードの向上
-- GitHub ActionsとHugging Faceの連携による自動デプロイ
-- 定型的な設定ファイル(.gitignore, .SourceSageignoreなど)の事前準備
+### 1. 簡単セットアップ
+HarmonAI IIは、わずか数ステップでセットアップが完了します。`pip install harmon_ai`コマンドを実行し、設定ファイル(`config.yml`)を編集するだけで、すぐに開発を始められます。
 
-### 2. リポジトリの品質向上
-- 豊富なバッジによるプロジェクト情報の可視化
-- 体系的に整えられたREADMEテンプレート
-- SourceSageによるAI支援でのコミットメッセージ、リリースノート生成
+### 2. カスタマイズ性の高さ
+設定ファイルを編集することで、プロジェクトの各種設定を自由にカスタマイズできます。リポジトリ名やパッケージ名、アイコン画像のURLなど、プロジェクトの詳細を簡単に変更できます。
 
-このテンプレートを活用することで、リポジトリ作成時の初期コストを抑えつつ、品質と開発速度を担保することができます。AI時代の開発スタイルを先取りした、生産性の高いテンプレートとしてご利用ください。
+### 3. 自動化されたワークフロー
+GitHub ActionsとHugging Faceの連携により、コードのプッシュやリリースタグの作成をトリガーとして、自動的にパッケージのビルドとデプロイが行われます。面倒な手作業を省略し、開発に集中できます。
 
-## 🎥 デモ
+### 4. 充実したドキュメンテーション
+HarmonAI IIは、プロジェクトの概要や使い方、アップデート履歴などを体系的にまとめたREADMEテンプレートを提供します。ドキュメントの作成に悩むことなく、わかりやすいREADMEを簡単に生成できます。
 
-HarmonAI IIのデモアプリケーションは、GitHub Actionsと連携し、自動的にデプロイされています。デモアプリを体験することで、HarmonAI IIの機能を直感的に理解することができます。
+### 5. AIによる開発サポート
+HarmonAI IIは、SourceSageとclaude.aiを活用し、コミットメッセージやリリースノートの自動生成をサポートします。AIの力を借りることで、開発者は本質的なタスクに集中できます。
 
-（準備中。。。）
+## 🛠️ 使い方
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/MakiAi/HarmonAI_II)
+1. `pip install harmon_ai`コマンドを実行し、HarmonAI IIをインストールします。
+2. プロジェクトのルートディレクトリに`.harmon_ai`ディレクトリを作成し、`config.yml`ファイルを配置します。
+3. `config.yml`ファイルを編集し、プロジェクトの各種設定を行います。
+4. `harmon-ai`コマンドを実行し、カスタマイズされたREADMEファイルを生成します。
 
-## 🚀 使い方
+詳細な使用方法については、[ドキュメント](https://github.com/Sunwood-ai-labs/HarmonAI_II/wiki)をご覧ください。
 
-### インストール
-HarmonAI IIは、以下のコマンドでインストールできます:
+## 🎉 HarmonAI II v1.4.0の新機能
 
-```bash
-pip install harmon_ai
-```
+### 1. YAMLによる設定ファイル管理
+プロジェクトの設定をYAML形式の設定ファイル(`config.yml`)で一元管理できるようになりました。必要な設定を簡単にカスタマイズできます。
 
-### 使用方法
-HarmonAI IIは、コマンドラインインターフェース(CLI)から簡単に使用できます。以下のコマンドを実行することで、プロジェクトのREADMEファイルを生成できます:
+### 2. ログ出力の改善
+`loguru`ライブラリを導入し、より詳細で見やすいログ出力を実現しました。ログレベルに応じた色分けにより、重要な情報を見落とすことなく確認できます。
 
-```bash
-harmon-ai --repo_name=HarmonAI_II --owner_name=Sunwood-ai-labs --package_name=harmon_ai --icon_url=https://huggingface.co/datasets/MakiAi/IconAssets/resolve/main/HarmonAI_II_icon.jpeg --title="Harmon AI"
-```
-
-生成されたREADMEファイルは、プロジェクトのルートディレクトリに `README.md` として保存されます。
-
-### カスタマイズ
-HarmonAI IIは、ユーザーのニーズに合わせてカスタマイズ可能です。設定ファイルを編集することで、プロジェクトの動作を柔軟に調整できます。
+### 3. CI/CDファイルの自動コピー
+プロジェクトで使用するCI/CDファイル(`publish-to-pypi.yml`)を自動的にコピーします。開発用ディレクトリと本番用ディレクトリの両方にCI/CDファイルが配置され、シームレスなデプロイが可能です。
 
 ## 📝 アップデート
+
+### v1.4.0 (2024-06-01)
+- YAMLによる設定ファイル管理
+- CI/CDファイルの自動コピー
 
 ### v1.3.0 (2024-05-13)
 - SNSテンプレートの追加とSNSバッジ生成機能の実装
@@ -103,17 +103,18 @@ HarmonAI IIは、ユーザーのニーズに合わせてカスタマイズ可能
 ### v1.0.0 (2024-04-20)
 - 初回リリースと基本的な機能の実装
 
+
+
 ## 🤝 コントリビューション
-HarmonAI IIへのご協力は大歓迎です！バグ報告、機能要求、プルリクエストなどを通じて、プロジェクトの改善にご協力ください。詳細は[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
+
+HarmonAI IIは、オープンソースプロジェクトとして、コミュニティからの貢献を歓迎しています。バグ報告や機能リクエスト、プルリクエストなどを通じて、プロジェクトの改善にご協力ください。コントリビューションガイドラインについては、[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
 
 ## 📄 ライセンス
-HarmonAI IIは[MIT License](LICENSE)の下でリリースされています。
+
+HarmonAI IIは、MITライセンスの下で公開されています。詳細については、[LICENSE](LICENSE)ファイルをご確認ください。
 
 ## 🙏 謝辞
-HarmonAI IIの開発にあたり、以下の方々に感謝いたします:
 
-- [Sunwood-ai-labs](https://github.com/Sunwood-ai-labs)チームのメンバー
-- [SourceSage](https://github.com/Sunwood-ai-labs/SourceSage)プロジェクト
-- [claude.ai](https://claude.ai/)チーム
+HarmonAI IIの開発にあたり、Sunwood-ai-labsチームのメンバー、SourceSageプロジェクト、そしてclaude.aiチームに深く感謝いたします。皆様のご支援なくしては、このプロジェクトは実現できませんでした。
 
-引き続き、HarmonAI IIプロジェクトをよろしくお願いいたします！
+HarmonAI IIは、これからもAIと人間の調和を目指し、開発者の皆様に最高のエクスペリエンスを提供できるよう尽力してまいります。ぜひ、HarmonAI IIを活用し、AIの力を開発に役立ててください！
