@@ -2,7 +2,7 @@ import os
 
 class HarmonAI:
     @staticmethod
-    def generate_readme(
+    def run(
         repo_name,
         owner_name,
         package_name,
