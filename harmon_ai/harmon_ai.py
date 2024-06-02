@@ -2,12 +2,17 @@ import os
 from pathlib import Path
 from .utils import load_config, load_file_content, copy_cicd_file_if_missing, config_preview
 from art import tprint
+from loguru import logger
 
 class HarmonAI:
-    def __init__(self):
-        config_path = os.path.expanduser("./.harmon_ai/config.yml")
-        self.config = load_config(config_path, os.path.join(Path(__file__).parent, "templates/config.example.yml"))
-
+    def __init__(self, config_path="./.harmon_ai/config.yml", config=None):
+        
+        if(config is None):
+            config_path = os.path.expanduser(config_path)
+            self.config = load_config(config_path, os.path.join(Path(__file__).parent, "templates/config.example.yml"))
+        else:
+            self.config = config
+            
         tprint("-- HarmonAI --")
         config_preview(self.config)
 
@@ -53,6 +58,13 @@ class HarmonAI:
         with open(output_path, "w", encoding="utf8") as file:
             file.write(template)
 
+        if(self.config['harmon_ai']['main']['replace_readme']):
+            
+            main_readme_path = os.path.join(self.config['harmon_ai']['main']['main_dir'], "README.md")
+            logger.success(f"README.mdが置換されました ({main_readme_path})")
+            with open(main_readme_path, "w", encoding="utf8") as file:
+                file.write(template)
+        
     def generate_badges(self):
         template = self.load_template("badges_template")
         template = template.replace("{repo_name}", self.config['harmon_ai']['environment']['repo_name'])
@@ -67,3 +79,6 @@ class HarmonAI:
         template = template.replace("{twitter_url}", self.config['harmon_ai']['environment']['twitter_url'])
         template = template.replace("{blog_url}", self.config['harmon_ai']['environment']['blog_url'])
         return template
+    
+    
+    
