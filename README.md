@@ -36,6 +36,25 @@ license: mit
 >[!IMPORTANT]
 >このリポジトリのリリースノートやREADME、コミットメッセージの9割近くは[claude.ai](https://claude.ai/)や[ChatGPT4](https://chatgpt.com/)を活用した[AIRA](https://github.com/Sunwood-ai-labs/AIRA), [SourceSage](https://github.com/Sunwood-ai-labs/SourceSage), [Gaiah](https://github.com/Sunwood-ai-labs/Gaiah), [HarmonAI_II](https://github.com/Sunwood-ai-labs/HarmonAI_II)で生成しています。
 
+## Project: HarmonAI II
+
+```plaintext
+OS: nt
+Directory: C:\Prj\HarmonAI_II
+
+├─ harmon_ai/
+│  ├─ cli.py
+│  ├─ harmon_ai.py
+│  ├─ utils.py
+│  ├─ __init__.py
+├─ script/
+│  ├─ activate-harmon_ai_dev.bat
+├─ app.py
+├─ MANIFEST.in
+├─ README.md
+├─ setup.py
+```
+
 ## 🌟 HarmonAI IIへようこそ！
 
 HarmonAI IIは、AIとの調和と無限の可能性を追求するプロジェクトです。私たちは、開発者の皆様がAIの力を最大限に活用し、効率的かつ高品質なソフトウェア開発を行えるよう、ユーザーフレンドリーなテンプレートを提供しています。
@@ -64,20 +83,13 @@ HarmonAI IIは、SourceSageとclaude.aiを活用し、コミットメッセー�
 3. `config.yml`ファイルを編集し、プロジェクトの各種設定を行います。
 4. `harmon-ai`コマンドを実行し、カスタマイズされたREADMEファイルを生成します。
 
-詳細な使用方法については、[ドキュメント](https://github.com/Sunwood-ai-labs/HarmonAI_II/wiki)をご覧ください。
-
-## 🎉 HarmonAI II v1.4.0の新機能
-
-### 1. YAMLによる設定ファイル管理
-プロジェクトの設定をYAML形式の設定ファイル(`config.yml`)で一元管理できるようになりました。必要な設定を簡単にカスタマイズできます。
-
-### 2. ログ出力の改善
-`loguru`ライブラリを導入し、より詳細で見やすいログ出力を実現しました。ログレベルに応じた色分けにより、重要な情報を見落とすことなく確認できます。
-
-### 3. CI/CDファイルの自動コピー
-プロジェクトで使用するCI/CDファイル(`publish-to-pypi.yml`)を自動的にコピーします。開発用ディレクトリと本番用ディレクトリの両方にCI/CDファイルが配置され、シームレスなデプロイが可能です。
+詳細な使用方法については、[ドキュメント](docs/intoro.md)をご覧ください。
 
 ## 📝 アップデート
+
+### v1.5.0 (2024-06-02)
+- READMEの自動置換機能
+- Gaiah設定ファイルの追加
 
 ### v1.4.0 (2024-06-01)
 - YAMLによる設定ファイル管理
